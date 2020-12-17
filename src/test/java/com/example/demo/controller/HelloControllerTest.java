@@ -25,4 +25,13 @@ public class HelloControllerTest {
                 .andExpect(MockMvcResultMatchers.content().string("Greeting from Spring boot"));
     }
 
+    @Test
+    public void sayBye() throws Exception{
+        mockMvc.perform(
+                MockMvcRequestBuilders.get("/bye")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string("Thanks for using Spring boot, Good bye!!"));
+    }
+
 }
