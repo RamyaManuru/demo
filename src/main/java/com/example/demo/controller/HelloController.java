@@ -10,4 +10,9 @@ public class HelloController {
     public String sayHello() {
         return "Greeting from Spring boot";
     }
+
+    @RequestMapping("/bye")
+    public String sayBye() {
+        return "Thanks for using Spring boot, Good bye!!";
+    }
 }
