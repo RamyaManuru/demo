@@ -15,4 +15,5 @@ public class HelloController {
     public String sayBye() {
         return "Thanks for using Spring boot, Good bye!!";
     }
+
 }

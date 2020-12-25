@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-docker-k8s-deployment
+  labels:
+    app: demo-docker-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-docker-k8s
+  template:
+    metadata:
+      labels:
+        app: demo-docker-k8s
+    spec:
+      containers:
+        - name: demo-docker-k8s
+          image: ramyamanuru/demodocker
+          ports:
+            - containerPort: 8085
